@@ -1,0 +1,17 @@
+x=linspace(0,3);
+y=x.^2.*sin(x);
+plot(x,y);
+line([2,2],[0,2^2*sin(2)]);%画直线函数，第一个参数是起点横坐标到终点横坐标
+str='$$\int_{0}^{2} x^2\sin(x) dx $$';%定积分的显示
+text(0.25,2.5,str,'Interpreter','latex');%在（0.25,2.5）处显示公式，Interpreter属性能够使较为复杂的一个公式显示在图表上
+annotation('arrow','X',[0.32,0.5],'Y',[0.6,0.4]);
+title('The function of $$\int_{0}^{2}x^2\sin(x)dx$$','Interpreter','latex')
+%%%%%%%%%%%%%%%%%%%%%%
+t=linspace(1,2);
+f=t.^2;
+g=sin(2*pi*t);
+plot(t,f,'-k',t,g,'ro');
+legend('t^2','sin(2\pit)'); %设置图例
+xlabel('Time(ms)');%给x轴命名
+ylabel('f(t)');%给y轴命名
+title('Mini Assignment #1');%给图表起名字
